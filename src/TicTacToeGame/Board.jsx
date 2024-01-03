@@ -30,6 +30,9 @@ export const Board = () => {
     const isWinner = checkWinner();
 
     const handleClick = (index) => {
+        if(state[index]!== null){
+            return;
+        }
         const copyState = [...state];
         copyState[index] = isX ? "Fuka" : "Wahid";
         setState(copyState);
